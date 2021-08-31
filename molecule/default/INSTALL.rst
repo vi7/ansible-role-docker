@@ -1,0 +1,32 @@
+*********************************
+Vagrant driver installation guide
+*********************************
+
+Requirements
+============
+
+* Vagrant
+* Virtualbox
+
+Install
+=======
+
+Please refer to the `Virtual environment`_ documentation for installation best
+practices. If not using a virtual environment, please consider passing the
+widely recommended `'--user' flag`_ when invoking ``pip``.
+
+.. _Virtual environment: https://virtualenv.pypa.io/en/latest/
+.. _'--user' flag: https://packaging.python.org/tutorials/installing-packages/#installing-to-the-user-site
+
+.. code-block:: bash
+
+    $ pip install 'molecule_vagrant'
+
+Run
+===
+
+Providing additional CLI arguments for the `ansible-playbook`_:
+
+.. code-block:: bash
+
+    $ molecule converge -- -vvv --tags foo,bar

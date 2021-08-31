@@ -1,0 +1,10 @@
+---
+# Docker repo URL
+docker_repo_url: https://download.docker.com/linux/fedora/docker-ce.repo
+# Docker version to install
+docker_version: '20.10.5'
+
+# Docker Compose version to install
+docker_compose_version: '1.28.6'
+# Installation path for the Docker Compose
+docker_compose_path: /usr/local/bin/docker-compose

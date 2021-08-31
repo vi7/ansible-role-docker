@@ -1,0 +1,31 @@
+---
+dependency:
+  name: galaxy
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
+driver:
+  name: vagrant
+  provider:
+    name: virtualbox
+platforms:
+- name: fedora33
+  # List of dictionaries mapped to `config.vm.network`
+  interfaces:
+  # `network_name` is the required identifier, all other keys map to
+  # arguments.
+  - network_name: private_network
+    ip: 192.168.200.50
+  box: fedora/33-cloud-base
+  memory: 1024
+  cpus: 1
+provisioner:
+  name: ansible
+  log: True
+  config_options:
+    defaults:
+      callback_whitelist: profile_tasks
+verifier:
+  name: ansible

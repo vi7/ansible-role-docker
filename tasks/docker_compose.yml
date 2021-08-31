@@ -1,0 +1,9 @@
+---
+- name: Install Docker Compose  # noqa no-changed-when
+  # Installation as per official guide, hence shell module usage
+  shell: |
+    curl -L "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-$(uname -s)-$(uname -m)" -o {{ docker_compose_path }}
+    chmod +x {{ docker_compose_path }}
+  args:
+    # suppress warning about the curl usage
+    warn: false

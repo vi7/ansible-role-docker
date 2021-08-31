@@ -1,0 +1,4 @@
+ansible~=2.10.7
+python-vagrant~=0.5.15
+molecule[lint]~=3.3.0
+molecule-vagrant~=0.6.1
