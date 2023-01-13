@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: docker
   author: vi7
-  description: Docker and Docker Compose installation role
+  description: Docker and Docker Compose plugin installation role
   min_ansible_version: 2.14
 
   license: BSD
@@ -15,8 +15,6 @@ galaxy_info:
   platforms:
   - name: Fedora
     versions:
-    - 33
-    - 34
     - 36
     - 37
 

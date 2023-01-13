@@ -1,7 +1,7 @@
 Ansible Role: Docker
 ====================
 
-Role to install Docker Engine and Docker Compose
+Role to install Docker Engine and Docker Compose plugin
 
 Requirements
 ------------
@@ -29,14 +29,9 @@ Create `my_playbook.yml` with the following contents:
     - docker
 ```
 
-And then run - this will install Docker and Docker Compose to the `localhost` host:
+And then run - this will install Docker and Docker Compose plugin to the `localhost` host:
 ```bash
 ansible-playbook my_playbook.yml
-```
-
-Docker or Docker Compose installation can be switched on/off using tags. Example (only Docker-Compose will be installed):
-```bash
-ansible-playbook -t docker-compose my_playbook.yml
 ```
 
 Contribution

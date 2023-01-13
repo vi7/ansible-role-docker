@@ -11,14 +11,14 @@ driver:
   provider:
     name: virtualbox
 platforms:
-- name: fedora33
+- name: fedora37
   # List of dictionaries mapped to `config.vm.network`
   interfaces:
   # `network_name` is the required identifier, all other keys map to
   # arguments.
   - network_name: private_network
     ip: 192.168.200.50
-  box: fedora/33-cloud-base
+  box: fedora/37-cloud-base
   memory: 1024
   cpus: 1
 provisioner:
@@ -26,6 +26,8 @@ provisioner:
   log: True
   config_options:
     defaults:
-      callback_whitelist: profile_tasks
+      callbacks_enabled: profile_tasks
+    ssh_connection:
+      pipelining: True
 verifier:
   name: ansible
